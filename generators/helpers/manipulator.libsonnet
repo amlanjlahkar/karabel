@@ -26,11 +26,13 @@ local genTo(t) = (
   local tsc = get(t, 'sc');  // to.shell_command
   local tk = get(t, 'k');  // to.key
   local tm = get(t, 'm');  // to.modifiers
-  local tv = get(t, 'v');  // to.set_variable
+  local ts = get(t, 's');  // setters(to.set_variable, to.notification_message)
 
-  if tv != null then
-    assert std.type(tv) == 'array' : 'manipulator: t.v(to.set_variable) must be an array!';
-    tv
+  if ts != null then
+    assert std.type(ts) == 'array' : |||
+        manipulator: t.s(setters -> [to.set_variable, to.notification_message]) must be an array!
+    |||;
+    ts
   else {
     shell_command: if std.type(tsc) == 'string' then tsc,
     key_code: if self.shell_command == null then (if std.isString(t) then t else tk),
