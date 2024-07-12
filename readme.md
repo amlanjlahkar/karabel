@@ -1,4 +1,6 @@
-![The XKeyboardCD](https://imgs.xkcd.com/comics/xkeyboarcd.png)
+![The XKeyboarCD](https://imgs.xkcd.com/comics/xkeyboarcd_2x.png)
+
+*[source](https://xkcd.com/2150/)*
 
 This repository contains my personal rules for [karabiner elements](https://karabiner-elements.pqrs.org/).
 
