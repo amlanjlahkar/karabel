@@ -1,6 +1,6 @@
 // {{{1 Keybinds
 // {{{2 Hyper
-local hyper(mod_only=false) = {
+local key_hyper(mod_only=false) = {
   assert std.type(mod_only) == 'boolean',
 
   [if !mod_only then 'k']: 'left_shift',
@@ -12,6 +12,24 @@ local hyper(mod_only=false) = {
      ],
 };
 // 2}}}
+// TODO: (maybe)Make to event more generic
+//
+// Map keys to shell_command based on a fixed determinant
+// e.g. can be used to simplify layer specific mappings, where a layer can be determined by a variable
+local key_map(T, map) = [
+  local valid_determinants = ['var', 'mod'];
+  assert std.type(T) == 'array' && std.type(map) == 'object';
+  assert std.member(valid_determinants, T[0]) : 'map_key: T[0] must be of any one of ' + std.join(', ', valid_determinants);
+  {
+    [if T[0] == 'var' then 'conditions']: [{ name: T[1], type: 'variable_if', value: 1 }],
+    [if T[0] == 'mod' then 'from']: { modifiers: { mandatory: T[1] } },
+  } + {
+    type: 'basic',
+    from+: { key_code: k },
+    to: { shell_command: map[k] },
+  }
+  for k in std.objectFields(map)
+];
 // 1}}}
 
 // {{{1 Setters
@@ -57,7 +75,8 @@ local if_var(name, set=true) = {
 // 1}}}
 
 {
-  key_hyper: hyper,
+  key_hyper: key_hyper,
+  key_map: key_map,
   set_var: set_var,
   set_nf: set_nf,
   if_app: if_app,
