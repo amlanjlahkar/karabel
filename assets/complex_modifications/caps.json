@@ -110,6 +110,14 @@
                "parameters": {
                   "basic.to_delayed_action_delay_milliseconds": 5000
                },
+               "to": [
+                  {
+                     "set_variable": {
+                        "name": "control_as_hyper",
+                        "value": true
+                     }
+                  }
+               ],
                "to_delayed_action": {
                   "to_if_canceled": {
                      "set_variable": {
@@ -153,6 +161,14 @@
                      ]
                   }
                },
+               "to": [
+                  {
+                     "set_variable": {
+                        "name": "control_as_hyper",
+                        "value": false
+                     }
+                  }
+               ],
                "type": "basic"
             }
          ]

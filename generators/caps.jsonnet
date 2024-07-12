@@ -41,14 +41,14 @@ local bid = [
         mp({
           c: [if_app(bid), if_var(var, false)],
           f: { k: 'backslash', m: { m: 'left_control' } },
-          t: { v: [set_var(var)] },
+          t: { s: [set_var(var)] },
           td: { c: set_var(var, false), i: set_var(var, false) },
           p: { 'basic.to_delayed_action_delay_milliseconds': 5000 },
         }),
         mp({
           c: [if_app(bid), if_var(var)],
           f: { k: 'backslash', m: hyper(true).m },
-          t: { v: [set_var(var, false)] },
+          t: { s: [set_var(var, false)] },
         }),
       ],
     },
