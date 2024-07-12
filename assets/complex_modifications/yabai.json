@@ -116,7 +116,7 @@
                   {
                      "name": "win_ctrl_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -132,7 +132,7 @@
                   {
                      "name": "win_ctrl_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -148,7 +148,7 @@
                   {
                      "name": "win_ctrl_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -164,7 +164,7 @@
                   {
                      "name": "win_ctrl_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -180,7 +180,7 @@
                   {
                      "name": "win_ctrl_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -196,7 +196,7 @@
                   {
                      "name": "win_ctrl_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -287,7 +287,7 @@
                   {
                      "name": "win_resize_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -303,7 +303,7 @@
                   {
                      "name": "win_resize_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -319,7 +319,7 @@
                   {
                      "name": "win_resize_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -335,7 +335,7 @@
                   {
                      "name": "win_resize_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -351,7 +351,7 @@
                   {
                      "name": "win_resize_mode",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {

@@ -21,7 +21,7 @@ local key_map(T, map) = [
   assert std.type(T) == 'array' && std.type(map) == 'object';
   assert std.member(valid_determinants, T[0]) : 'map_key: T[0] must be of any one of ' + std.join(', ', valid_determinants);
   {
-    [if T[0] == 'var' then 'conditions']: [{ name: T[1], type: 'variable_if', value: 1 }],
+    [if T[0] == 'var' then 'conditions']: [{ name: T[1], type: 'variable_if', value: true }],
     [if T[0] == 'mod' then 'from']: { modifiers: { mandatory: T[1] } },
   } + {
     type: 'basic',
