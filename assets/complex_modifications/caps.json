@@ -45,7 +45,7 @@
                   {
                      "name": "control_as_hyper",
                      "type": "variable_unless",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -69,7 +69,7 @@
                   {
                      "name": "control_as_hyper",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -98,7 +98,7 @@
                   {
                      "name": "control_as_hyper",
                      "type": "variable_unless",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -110,25 +110,17 @@
                "parameters": {
                   "basic.to_delayed_action_delay_milliseconds": 5000
                },
-               "to": [
-                  {
-                     "set_variable": {
-                        "name": "control_as_hyper",
-                        "value": 1
-                     }
-                  }
-               ],
                "to_delayed_action": {
                   "to_if_canceled": {
                      "set_variable": {
                         "name": "control_as_hyper",
-                        "value": 0
+                        "value": false
                      }
                   },
                   "to_if_invoked": {
                      "set_variable": {
                         "name": "control_as_hyper",
-                        "value": 0
+                        "value": false
                      }
                   }
                },
@@ -147,7 +139,7 @@
                   {
                      "name": "control_as_hyper",
                      "type": "variable_if",
-                     "value": 1
+                     "value": true
                   }
                ],
                "from": {
@@ -161,14 +153,6 @@
                      ]
                   }
                },
-               "to": [
-                  {
-                     "set_variable": {
-                        "name": "control_as_hyper",
-                        "value": 0
-                     }
-                  }
-               ],
                "type": "basic"
             }
          ]

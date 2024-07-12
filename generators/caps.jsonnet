@@ -29,26 +29,26 @@ local bid = [
       description: 'Caps as control',
       manipulators: [
         mp({
+          c: [if_app(bid), if_var(var, false)],
           f: 'caps_lock',
           t: 'left_control',
-          c: [if_app(bid, true), if_var(var, false)],
         }),
         mp({
+          c: [if_app(bid), if_var(var)],
           f: 'caps_lock',
           t: hyper(),
-          c: [if_app(bid, true), if_var(var, true)],
         }),
         mp({
+          c: [if_app(bid), if_var(var, false)],
           f: { k: 'backslash', m: { m: 'left_control' } },
           t: { v: [set_var(var)] },
-          td: { c: set_var(var, 0), i: set_var(var, 0) },
-          c: [if_app(bid, true), if_var(var, false)],
+          td: { c: set_var(var, false), i: set_var(var, false) },
           p: { 'basic.to_delayed_action_delay_milliseconds': 5000 },
         }),
         mp({
+          c: [if_app(bid), if_var(var)],
           f: { k: 'backslash', m: hyper(true).m },
-          t: { v: [set_var(var, 0)] },
-          c: [if_app(bid, true), if_var(var, true)],
+          t: { v: [set_var(var, false)] },
         }),
       ],
     },
