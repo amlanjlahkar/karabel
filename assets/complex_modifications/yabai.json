@@ -82,6 +82,33 @@
                   }
                ],
                "from": {
+                  "key_code": "escape"
+               },
+               "to": [
+                  {
+                     "set_variable": {
+                        "name": "win_ctrl_mode",
+                        "value": false
+                     }
+                  },
+                  {
+                     "set_notification_message": {
+                        "id": "yabai.win_ctrl_mode",
+                        "text": ""
+                     }
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "name": "win_ctrl_mode",
+                     "type": "variable_if",
+                     "value": true
+                  }
+               ],
+               "from": {
                   "key_code": "j",
                   "modifiers": {
                      "mandatory": "left_shift"
@@ -265,6 +292,33 @@
                         "left_command"
                      ]
                   }
+               },
+               "to": [
+                  {
+                     "set_variable": {
+                        "name": "win_resize_mode",
+                        "value": false
+                     }
+                  },
+                  {
+                     "set_notification_message": {
+                        "id": "yabai.win_resize_mode",
+                        "text": ""
+                     }
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "name": "win_resize_mode",
+                     "type": "variable_if",
+                     "value": true
+                  }
+               ],
+               "from": {
+                  "key_code": "escape"
                },
                "to": [
                   {

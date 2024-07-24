@@ -8,6 +8,340 @@
             "complex_modifications": {
                 "rules": [
                     {
+                        "description": "Yabai: Window resize mode",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_unless",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "win_resize_mode",
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.win_resize_mode",
+                                            "text": "Yabai: Window resize mode active(Hyper+R)"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "r",
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "win_resize_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.win_resize_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "win_resize_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.win_resize_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "equal_sign" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --equalize" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "h" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:-20:0" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "j" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:0:20" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "k" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:0:-20" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_resize_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "l" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:20:0" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Yabai: Window control mode",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_unless",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "win_ctrl_mode",
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.win_ctrl_mode",
+                                            "text": "Yabai: Window control mode active(Hyper+W)"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "w",
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "win_ctrl_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.win_ctrl_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "win_ctrl_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.win_ctrl_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": "left_shift" }
+                                },
+                                "to": { "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c~/config/yabai/scripts/yabai_swap_win" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": "left_shift" }
+                                },
+                                "to": { "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c~/config/yabai/scripts/yabai_swap_win_anti" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "0" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai-m space --balance" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "f" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle native-fullscreen" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "p" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle split" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "s" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle sticky" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "spacebar" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle float --grid 4:4:1:1:5:5" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "win_ctrl_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "z" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Progrule: Firefox",
                         "manipulators": [
                             {
@@ -188,290 +522,6 @@
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                                 "to": { "shell_command": "open /Applications/WezTerm.app" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Yabai: Window control mode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_unless",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "win_ctrl_mode",
-                                            "value": true
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.win_ctrl_mode",
-                                            "text": "Yabai: Window control mode active(Hyper+W)"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "win_ctrl_mode",
-                                            "value": false
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.win_ctrl_mode",
-                                            "text": ""
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": "left_shift" }
-                                },
-                                "to": { "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c~/config/yabai/scripts/yabai_swap_win" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": "left_shift" }
-                                },
-                                "to": { "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c~/config/yabai/scripts/yabai_swap_win_anti" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "0" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai-m space --balance" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "f" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle native-fullscreen" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "p" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle split" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "s" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle sticky" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "spacebar" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle float --grid 4:4:1:1:5:5" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_ctrl_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "z" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Yabai: Window resize mode",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_unless",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "win_resize_mode",
-                                            "value": true
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.win_resize_mode",
-                                            "text": "Yabai: Window resize mode active(Hyper+R)"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "r",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "win_resize_mode",
-                                            "value": false
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.win_resize_mode",
-                                            "text": ""
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "equal_sign" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --equalize" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "h" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:-20:0" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "j" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:0:20" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "k" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:0:-20" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "win_resize_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "l" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --resize right:20:0" },
                                 "type": "basic"
                             }
                         ]

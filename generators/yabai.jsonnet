@@ -34,6 +34,11 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
         }),
         mp({
           c: [if_var(var)],
+          f: 'escape',
+          t: { s: [set_var(var, false), set_nf(nid)] },
+        }),
+        mp({
+          c: [if_var(var)],
           f: { k: 'j', m: { m: 'left_shift' } },
           t: { sc: exec + '~/config/yabai/scripts/yabai_swap_win' },
         }),
@@ -68,6 +73,11 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
         mp({
           c: [if_var(var)],
           f: { k: 'r', m: { m: hyper(true).m } },
+          t: { s: [set_var(var, false), set_nf(nid)] },
+        }),
+        mp({
+          c: [if_var(var)],
+          f: 'escape',
           t: { s: [set_var(var, false), set_nf(nid)] },
         }),
       ] + map(['var', var], {
