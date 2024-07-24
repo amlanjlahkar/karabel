@@ -3,7 +3,6 @@ local util = import 'helpers/util.libsonnet';
 
 local mp = manipulator.call;
 local hyper = util.key_hyper;
-local map = util.key_map;
 
 local launch_prefix = 'q';
 local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
