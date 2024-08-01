@@ -41,5 +41,6 @@ $(targets): %.json: %.jsonnet
 		rm -rf $(target);\
 		echo Generating target for $@;\
 		jsonnet $(generator) -o $(target);\
+		karabiner_cli --lint-complex-modifications $(target);\
 	fi
 
