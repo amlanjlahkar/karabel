@@ -9,6 +9,7 @@
                      "bundle_identifiers": [
                         "^com\\.apple\\.Terminal$",
                         "^com\\.github\\.wez\\.wezterm$",
+                        "^info\\.sioyek\\.sioyek$",
                         "^md\\.obsidian$"
                      ],
                      "type": "frontmost_application_unless"
@@ -38,6 +39,7 @@
                      "bundle_identifiers": [
                         "^com\\.apple\\.Terminal$",
                         "^com\\.github\\.wez\\.wezterm$",
+                        "^info\\.sioyek\\.sioyek$",
                         "^md\\.obsidian$"
                      ],
                      "type": "frontmost_application_if"
@@ -62,6 +64,7 @@
                      "bundle_identifiers": [
                         "^com\\.apple\\.Terminal$",
                         "^com\\.github\\.wez\\.wezterm$",
+                        "^info\\.sioyek\\.sioyek$",
                         "^md\\.obsidian$"
                      ],
                      "type": "frontmost_application_if"
@@ -91,6 +94,7 @@
                      "bundle_identifiers": [
                         "^com\\.apple\\.Terminal$",
                         "^com\\.github\\.wez\\.wezterm$",
+                        "^info\\.sioyek\\.sioyek$",
                         "^md\\.obsidian$"
                      ],
                      "type": "frontmost_application_if"
@@ -140,6 +144,7 @@
                      "bundle_identifiers": [
                         "^com\\.apple\\.Terminal$",
                         "^com\\.github\\.wez\\.wezterm$",
+                        "^info\\.sioyek\\.sioyek$",
                         "^md\\.obsidian$"
                      ],
                      "type": "frontmost_application_if"

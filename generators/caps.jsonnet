@@ -11,6 +11,7 @@ local if_var = util.if_var;
 local bid = [
   '^com\\.apple\\.Terminal$',
   '^com\\.github\\.wez\\.wezterm$',
+  '^info\\.sioyek\\.sioyek$',
   '^md\\.obsidian$',
 ];
 
