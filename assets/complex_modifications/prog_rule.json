@@ -13,7 +13,7 @@
                   }
                ],
                "from": {
-                  "key_code": "close_bracket",
+                  "key_code": "i",
                   "modifiers": {
                      "mandatory": [
                         "left_shift",
@@ -42,7 +42,7 @@
                   }
                ],
                "from": {
-                  "key_code": "open_bracket",
+                  "key_code": "o",
                   "modifiers": {
                      "mandatory": [
                         "left_shift",

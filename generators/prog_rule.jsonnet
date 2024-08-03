@@ -13,8 +13,8 @@ local if_app = util.if_app;
 
       local bid = ['org\\.mozilla\\.firefox'],
       local manipulators = [
-        mp({ f: { k: 'close_bracket', m: hyper(true).m }, t: { k: 'right_arrow', m: ['option', 'command'] } }),
-        mp({ f: { k: 'open_bracket', m: hyper(true).m }, t: { k: 'left_arrow', m: ['option', 'command'] } }),
+        mp({ f: { k: 'i', m: hyper(true).m }, t: { k: 'right_arrow', m: ['option', 'command'] } }),
+        mp({ f: { k: 'o', m: hyper(true).m }, t: { k: 'left_arrow', m: ['option', 'command'] } }),
         mp({ f: { k: 'j', m: hyper(true).m }, t: 'down_arrow' }),
         mp({ f: { k: 'k', m: hyper(true).m }, t: 'up_arrow' }),
         mp({ f: { k: 'j', m: hyper(true).m }, t: { k: 'down_arrow', m: ['command'] } }),
