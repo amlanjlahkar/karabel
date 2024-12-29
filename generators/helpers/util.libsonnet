@@ -62,6 +62,14 @@ local if_app(bundles, is_frontmost=true) = {
   type: type,
 };
 // 2}}}
+// {{{2 File Paths
+local if_file(file_paths, is_frontmost=true) = {
+  assert std.type(file_paths) == 'array' && std.type(is_frontmost) == 'boolean',
+  local type = if is_frontmost then 'frontmost_application_if' else 'frontmost_application_unless',
+  file_paths: file_paths,
+  type: type,
+};
+// 2}}}
 // {{{2 Variables
 local if_var(name, set=true) = {
   assert std.type(name) == 'string' && std.type(set) == 'boolean',
@@ -80,6 +88,7 @@ local if_var(name, set=true) = {
   set_var: set_var,
   set_nf: set_nf,
   if_app: if_app,
+  if_file: if_file,
   if_var: if_var,
 }
 

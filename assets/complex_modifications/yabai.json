@@ -14,12 +14,7 @@
                "from": {
                   "key_code": "w",
                   "modifiers": {
-                     "mandatory": [
-                        "left_shift",
-                        "left_control",
-                        "left_option",
-                        "left_command"
-                     ]
+                     "mandatory": "left_option"
                   }
                },
                "to": [
@@ -49,12 +44,7 @@
                "from": {
                   "key_code": "w",
                   "modifiers": {
-                     "mandatory": [
-                        "left_shift",
-                        "left_control",
-                        "left_option",
-                        "left_command"
-                     ]
+                     "mandatory": "left_option"
                   }
                },
                "to": [
@@ -115,7 +105,7 @@
                   }
                },
                "to": {
-                  "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c~/config/yabai/scripts/yabai_swap_win"
+                  "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c ~/config/yabai/scripts/yabai_swap_win"
                },
                "type": "basic"
             },
@@ -134,7 +124,7 @@
                   }
                },
                "to": {
-                  "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c~/config/yabai/scripts/yabai_swap_win_anti"
+                  "shell_command": "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh -c ~/config/yabai/scripts/yabai_swap_win_anti"
                },
                "type": "basic"
             },
@@ -150,7 +140,7 @@
                   "key_code": "0"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai-m space --balance"
+                  "shell_command": "/opt/homebrew/bin/yabai -m space --balance"
                },
                "type": "basic"
             },
@@ -248,14 +238,9 @@
                   }
                ],
                "from": {
-                  "key_code": "r",
+                  "key_code": "s",
                   "modifiers": {
-                     "mandatory": [
-                        "left_shift",
-                        "left_control",
-                        "left_option",
-                        "left_command"
-                     ]
+                     "mandatory": "left_option"
                   }
                },
                "to": [
@@ -268,7 +253,7 @@
                   {
                      "set_notification_message": {
                         "id": "yabai.win_resize_mode",
-                        "text": "Yabai: Window resize mode active(Hyper+R)"
+                        "text": "Yabai: Window resize mode active(Hyper+S)"
                      }
                   }
                ],
@@ -283,14 +268,9 @@
                   }
                ],
                "from": {
-                  "key_code": "r",
+                  "key_code": "s",
                   "modifiers": {
-                     "mandatory": [
-                        "left_shift",
-                        "left_control",
-                        "left_option",
-                        "left_command"
-                     ]
+                     "mandatory": "left_option"
                   }
                },
                "to": [
@@ -484,6 +464,33 @@
             {
                "conditions": [
                   {
+                     "name": "space_switcher_mode",
+                     "type": "variable_if",
+                     "value": true
+                  }
+               ],
+               "from": {
+                  "key_code": "escape"
+               },
+               "to": [
+                  {
+                     "set_variable": {
+                        "name": "space_switcher_mode",
+                        "value": false
+                     }
+                  },
+                  {
+                     "set_notification_message": {
+                        "id": "yabai.space_switcher_mode",
+                        "text": ""
+                     }
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
                      "name": "window_mover_mode",
                      "type": "variable_unless",
                      "value": true
@@ -505,7 +512,7 @@
                   {
                      "set_notification_message": {
                         "id": "yabai.window_mover_mode",
-                        "text": "Yabai: Space switcher mode active(Left_option+A)"
+                        "text": "Yabai: Window mover mode active(Left_option+A)"
                      }
                   }
                ],
@@ -524,6 +531,33 @@
                   "modifiers": {
                      "mandatory": "left_option"
                   }
+               },
+               "to": [
+                  {
+                     "set_variable": {
+                        "name": "window_mover_mode",
+                        "value": false
+                     }
+                  },
+                  {
+                     "set_notification_message": {
+                        "id": "yabai.window_mover_mode",
+                        "text": ""
+                     }
+                  }
+               ],
+               "type": "basic"
+            },
+            {
+               "conditions": [
+                  {
+                     "name": "window_mover_mode",
+                     "type": "variable_if",
+                     "value": true
+                  }
+               ],
+               "from": {
+                  "key_code": "escape"
                },
                "to": [
                   {

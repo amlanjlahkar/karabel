@@ -24,12 +24,12 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
       manipulators: [
         mp({
           c: [if_var(var, false)],
-          f: { k: 'w', m: hyper(true).m },
+          f: { k: 'w', m: { m: 'left_option' } },
           t: { s: [set_var(var), set_nf(nid, 'Yabai: Window control mode active(Hyper+W)')] },
         }),
         mp({
           c: [if_var(var)],
-          f: { k: 'w', m: hyper(true).m },
+          f: { k: 'w', m: { m: 'left_option' } },
           t: { s: [set_var(var, false), set_nf(nid)] },
         }),
         mp({
@@ -40,15 +40,15 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
         mp({
           c: [if_var(var)],
           f: { k: 'j', m: { m: 'left_shift' } },
-          t: { sc: exec + '~/config/yabai/scripts/yabai_swap_win' },
+          t: { sc: exec + ' ~/config/yabai/scripts/yabai_swap_win' },
         }),
         mp({
           c: [if_var(var)],
           f: { k: 'k', m: { m: 'left_shift' } },
-          t: { sc: exec + '~/config/yabai/scripts/yabai_swap_win_anti' },
+          t: { sc: exec + ' ~/config/yabai/scripts/yabai_swap_win_anti' },
         }),
       ] + map(['var', var], {
-        '0': yabai + '-m space --balance',
+        '0': yabai + ' -m space --balance',
         p: wt + ' split',
         z: wt + ' zoom-fullscreen',
         f: wt + ' native-fullscreen',
@@ -67,12 +67,12 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
       manipulators: [
         mp({
           c: [if_var(var, false)],
-          f: { k: 'r', m: { m: hyper(true).m } },
-          t: { s: [set_var(var), set_nf(nid, 'Yabai: Window resize mode active(Hyper+R)')] },
+          f: { k: 's', m: { m: 'left_option' } },
+          t: { s: [set_var(var), set_nf(nid, 'Yabai: Window resize mode active(Hyper+S)')] },
         }),
         mp({
           c: [if_var(var)],
-          f: { k: 'r', m: { m: hyper(true).m } },
+          f: { k: 's', m: { m: 'left_option' } },
           t: { s: [set_var(var, false), set_nf(nid)] },
         }),
         mp({
@@ -113,15 +113,25 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
           t: { s: [set_var(var_s, false), set_nf(nid_s)] },
         }),
         mp({
+          c: [if_var(var_s)],
+          f: 'escape',
+          t: { s: [set_var(var_s, false), set_nf(nid_s)] },
+        }),
+        mp({
           c: [if_var(var_w, false)],
           f: { k: 'a', m: { m: 'left_option' } },
-          t: { s: [set_var(var_w), set_nf(nid_w, 'Yabai: Space switcher mode active(Left_option+A)')] },
+          t: { s: [set_var(var_w), set_nf(nid_w, 'Yabai: Window mover mode active(Left_option+A)')] },
         }),
         mp({
           c: [if_var(var_w)],
           f: { k: 'a', m: { m: 'left_option' } },
           t: { s: [set_var(var_w, false), set_nf(nid_w)] },
-        })
+        }),
+        mp({
+          c: [if_var(var_w)],
+          f: 'escape',
+          t: { s: [set_var(var_w, false), set_nf(nid_w)] },
+        }),
       ] + map(['mod', 'left_option'], {
         j: '%(wf)s next || %(wf)s first' % { wf: wf },
         k: '%(wf)s prev || %(wf)s last' % { wf: wf },
