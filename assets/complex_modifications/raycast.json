@@ -69,6 +69,41 @@
                "type": "basic"
             }
          ]
+      },
+      {
+         "description": "Raycast: Check reminders",
+         "manipulators": [
+            {
+               "from": {
+                  "modifiers": {
+                     "mandatory": [
+                        "left_shift",
+                        "left_control",
+                        "left_option",
+                        "left_command"
+                     ]
+                  },
+                  "simultaneous": [
+                     {
+                        "key_code": "q"
+                     },
+                     {
+                        "key_code": "x"
+                     }
+                  ],
+                  "simultaneous_options": {
+                     "key_down_order": "strict"
+                  }
+               },
+               "parameters": {
+                  "basic.simultaneous_threshold_milliseconds": 500
+               },
+               "to": {
+                  "shell_command": "open raycast://extensions/raycast/apple-reminders/my-reminders"
+               },
+               "type": "basic"
+            }
+         ]
       }
    ],
    "title": "Raycast shortcuts"

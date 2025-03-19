@@ -40,12 +40,12 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
         mp({
           c: [if_var(var)],
           f: { k: 'j', m: { m: 'left_shift' } },
-          t: { sc: exec + ' ~/config/yabai/scripts/yabai_swap_win' },
+          t: { sc: exec + ' ~/dwots_mac/home/wm/yabai/.config/yabai/scripts/yabai_swap_win' },
         }),
         mp({
           c: [if_var(var)],
           f: { k: 'k', m: { m: 'left_shift' } },
-          t: { sc: exec + ' ~/config/yabai/scripts/yabai_swap_win_anti' },
+          t: { sc: exec + ' ~/dwots_mac/home/wm/yabai/.config/yabai/scripts/yabai_swap_win_anti' },
         }),
       ] + map(['var', var], {
         '0': yabai + ' -m space --balance',
