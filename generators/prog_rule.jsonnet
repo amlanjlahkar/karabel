@@ -17,6 +17,8 @@ local if_app = util.if_app;
         mp({ f: { k: 'o', m: hyper(true).m }, t: { k: 'left_arrow', m: ['option', 'command'] } }),
         mp({ f: { k: 'j', m: hyper(true).m }, t: 'down_arrow' }),
         mp({ f: { k: 'k', m: hyper(true).m }, t: 'up_arrow' }),
+        mp({ f: { k: 'h', m: hyper(true).m }, t: 'left_arrow' }),
+        mp({ f: { k: 'l', m: hyper(true).m }, t: 'right_arrow' }),
         mp({ f: { k: 'd', m: hyper(true).m }, t: { k: 'down_arrow', m: ['command'] } }),
         mp({ f: { k: 'u', m: hyper(true).m }, t: { k: 'up_arrow', m: ['command'] } }),
         mp({ f: { k: 'w', m: hyper(true).m }, t: { k: 'w', m: ['command'] } }),
