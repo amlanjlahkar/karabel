@@ -727,7 +727,7 @@
                   "key_code": "close_bracket"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space next; /opt/homebrew/bin/yabai -m space --focus next"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space next --focus"
                },
                "type": "basic"
             },
@@ -743,7 +743,7 @@
                   "key_code": "h"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 1; /opt/homebrew/bin/yabai -m space --focus 1"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 1 --focus"
                },
                "type": "basic"
             },
@@ -759,7 +759,7 @@
                   "key_code": "j"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 2; /opt/homebrew/bin/yabai -m space --focus 2"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 2 --focus"
                },
                "type": "basic"
             },
@@ -775,7 +775,7 @@
                   "key_code": "k"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 3; /opt/homebrew/bin/yabai -m space --focus 3"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 3 --focus"
                },
                "type": "basic"
             },
@@ -791,7 +791,7 @@
                   "key_code": "l"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 4; /opt/homebrew/bin/yabai -m space --focus 4"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 4 --focus"
                },
                "type": "basic"
             },
@@ -807,7 +807,7 @@
                   "key_code": "open_bracket"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space prev; /opt/homebrew/bin/yabai -m space --focus prev"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space prev --focus"
                },
                "type": "basic"
             },
@@ -823,7 +823,7 @@
                   "key_code": "semicolon"
                },
                "to": {
-                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 5; /opt/homebrew/bin/yabai -m space --focus 5"
+                  "shell_command": "/opt/homebrew/bin/yabai -m window --space 5 --focus"
                },
                "type": "basic"
             }

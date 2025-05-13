@@ -99,7 +99,7 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
 
       local wf = yabai + ' -m window --focus',
       local sf = yabai + ' -m space --focus',
-      local wm(space) = '%s -m window --space %d; %s %d' % [yabai, space, sf, space],
+      local wm(space) = '%s -m window --space %d --focus' % [yabai, space],
 
       manipulators: [
         mp({
@@ -150,8 +150,8 @@ local exec = "export PATH='/opt/homebrew/bin:/opt/homebrew/sbin:$PATH'; /bin/sh 
         k: wm(3),
         l: wm(4),
         semicolon: wm(5),
-        open_bracket: '%(y)s -m window --space prev; %(y)s -m space --focus prev' % { y: yabai },
-        close_bracket: '%(y)s -m window --space next; %(y)s -m space --focus next' % { y: yabai },
+        open_bracket: '%(y)s -m window --space prev --focus' % { y: yabai },
+        close_bracket: '%(y)s -m window --space next --focus' % { y: yabai },
       }),
     },
   ],

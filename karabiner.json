@@ -441,357 +441,6 @@
                         ]
                     },
                     {
-                        "description": "Yabai: Movements",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_unless",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "space_switcher_mode",
-                                            "value": true
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.space_switcher_mode",
-                                            "text": "Yabai: Space switcher mode active(Left_option+Q)"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "q",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "space_switcher_mode",
-                                            "value": false
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.space_switcher_mode",
-                                            "text": ""
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "escape" },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "space_switcher_mode",
-                                            "value": false
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.space_switcher_mode",
-                                            "text": ""
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_unless",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "window_mover_mode",
-                                            "value": true
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.window_mover_mode",
-                                            "text": "Yabai: Window mover mode active(Left_option+A)"
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "a",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "window_mover_mode",
-                                            "value": false
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.window_mover_mode",
-                                            "text": ""
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "escape" },
-                                "to": [
-                                    {
-                                        "set_variable": {
-                                            "name": "window_mover_mode",
-                                            "value": false
-                                        }
-                                    },
-                                    {
-                                        "set_notification_message": {
-                                            "id": "yabai.window_mover_mode",
-                                            "text": ""
-                                        }
-                                    }
-                                ],
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "close_bracket",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus next || /opt/homebrew/bin/yabai -m space --focus first" },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/yabai -m window --focus first" },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --focus prev || /opt/homebrew/bin/yabai -m window --focus last" },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "open_bracket",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last" },
-                                "type": "basic"
-                            },
-                            {
-                                "from": {
-                                    "key_code": "tab",
-                                    "modifiers": { "mandatory": "left_option" }
-                                },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus recent" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "h" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 1" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "j" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 2" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "k" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 3" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "l" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 4" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "space_switcher_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "semicolon" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 5" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "close_bracket" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space next; /opt/homebrew/bin/yabai -m space --focus next" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "h" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 1; /opt/homebrew/bin/yabai -m space --focus 1" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "j" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 2; /opt/homebrew/bin/yabai -m space --focus 2" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "k" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 3; /opt/homebrew/bin/yabai -m space --focus 3" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "l" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 4; /opt/homebrew/bin/yabai -m space --focus 4" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "open_bracket" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space prev; /opt/homebrew/bin/yabai -m space --focus prev" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "name": "window_mover_mode",
-                                        "type": "variable_if",
-                                        "value": true
-                                    }
-                                ],
-                                "from": { "key_code": "semicolon" },
-                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 5; /opt/homebrew/bin/yabai -m space --focus 5" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Yabai: Window resize mode",
                         "manipulators": [
                             {
@@ -1121,6 +770,357 @@
                                 ],
                                 "from": { "key_code": "z" },
                                 "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "Yabai: Movements",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_unless",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "space_switcher_mode",
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.space_switcher_mode",
+                                            "text": "Yabai: Space switcher mode active(Left_option+Q)"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "q",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "space_switcher_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.space_switcher_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "space_switcher_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.space_switcher_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_unless",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "window_mover_mode",
+                                            "value": true
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.window_mover_mode",
+                                            "text": "Yabai: Window mover mode active(Left_option+A)"
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "window_mover_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.window_mover_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "escape" },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "window_mover_mode",
+                                            "value": false
+                                        }
+                                    },
+                                    {
+                                        "set_notification_message": {
+                                            "id": "yabai.window_mover_mode",
+                                            "text": ""
+                                        }
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "close_bracket",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus next || /opt/homebrew/bin/yabai -m space --focus first" },
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --focus next || /opt/homebrew/bin/yabai -m window --focus first" },
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --focus prev || /opt/homebrew/bin/yabai -m window --focus last" },
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "open_bracket",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus prev || /opt/homebrew/bin/yabai -m space --focus last" },
+                                "type": "basic"
+                            },
+                            {
+                                "from": {
+                                    "key_code": "tab",
+                                    "modifiers": { "mandatory": "left_option" }
+                                },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus recent" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "h" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 1" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "j" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 2" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "k" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 3" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "l" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 4" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "space_switcher_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "semicolon" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m space --focus 5" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "close_bracket" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space next --focus" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "h" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 1 --focus" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "j" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 2 --focus" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "k" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 3 --focus" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "l" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 4 --focus" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "open_bracket" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space prev --focus" },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "window_mover_mode",
+                                        "type": "variable_if",
+                                        "value": true
+                                    }
+                                ],
+                                "from": { "key_code": "semicolon" },
+                                "to": { "shell_command": "/opt/homebrew/bin/yabai -m window --space 5 --focus" },
                                 "type": "basic"
                             }
                         ]
