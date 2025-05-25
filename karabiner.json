@@ -347,6 +347,24 @@
                         ]
                     },
                     {
+                        "description": "Raycast: Seach files",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
+                                    "simultaneous": [
+                                        { "key_code": "q" },
+                                        { "key_code": "semicolon" }
+                                    ],
+                                    "simultaneous_options": { "key_down_order": "strict" }
+                                },
+                                "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
+                                "to": { "shell_command": "open raycast://extensions/raycast/file-search/search-files" },
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
                         "description": "Raycast: Check reminders",
                         "manipulators": [
                             {
@@ -383,19 +401,19 @@
                         ]
                     },
                     {
-                        "description": "Raycast: Search bitwarden vault",
+                        "description": "Raycast: Kill process",
                         "manipulators": [
                             {
                                 "from": {
                                     "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
                                     "simultaneous": [
                                         { "key_code": "q" },
-                                        { "key_code": "v" }
+                                        { "key_code": "k" }
                                     ],
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "open raycast://extensions/jomifepe/bitwarden/search" },
+                                "to": { "shell_command": "open raycast://extensions/rolandleth/kill-process/index" },
                                 "type": "basic"
                             }
                         ]

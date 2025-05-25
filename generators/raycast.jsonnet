@@ -40,6 +40,26 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
         }),
       ],
     },
+    {
+      description: 'Raycast: Kill process',
+      manipulators: [
+        mp({
+          p: param_simthreshold,
+          f: { s: [launch_prefix, 'k'], so: { key_down_order: 'strict' }, m: hyper(true).m },
+          t: { sc: 'open raycast://extensions/rolandleth/kill-process/index' },
+        }),
+      ],
+    },
+    {
+      description: 'Raycast: Seach files',
+      manipulators: [
+        mp({
+          p: param_simthreshold,
+          f: { s: [launch_prefix, 'semicolon'], so: { key_down_order: 'strict' }, m: hyper(true).m },
+          t: { sc: 'open raycast://extensions/raycast/file-search/search-files' },
+        }),
+      ],
+    },
   ],
 }
 
