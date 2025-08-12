@@ -11,7 +11,8 @@
                         "^com\\.github\\.wez\\.wezterm$",
                         "^com\\.mitchellh\\.ghostty$",
                         "^info\\.sioyek\\.sioyek$",
-                        "^md\\.obsidian$"
+                        "^md\\.obsidian$",
+                        "^org\\.mozilla\\.firefox"
                      ],
                      "type": "frontmost_application_unless"
                   }
@@ -42,7 +43,8 @@
                         "^com\\.github\\.wez\\.wezterm$",
                         "^com\\.mitchellh\\.ghostty$",
                         "^info\\.sioyek\\.sioyek$",
-                        "^md\\.obsidian$"
+                        "^md\\.obsidian$",
+                        "^org\\.mozilla\\.firefox"
                      ],
                      "type": "frontmost_application_if"
                   },
@@ -68,7 +70,8 @@
                         "^com\\.github\\.wez\\.wezterm$",
                         "^com\\.mitchellh\\.ghostty$",
                         "^info\\.sioyek\\.sioyek$",
-                        "^md\\.obsidian$"
+                        "^md\\.obsidian$",
+                        "^org\\.mozilla\\.firefox"
                      ],
                      "type": "frontmost_application_if"
                   },
@@ -99,7 +102,8 @@
                         "^com\\.github\\.wez\\.wezterm$",
                         "^com\\.mitchellh\\.ghostty$",
                         "^info\\.sioyek\\.sioyek$",
-                        "^md\\.obsidian$"
+                        "^md\\.obsidian$",
+                        "^org\\.mozilla\\.firefox"
                      ],
                      "type": "frontmost_application_if"
                   },
@@ -150,7 +154,8 @@
                         "^com\\.github\\.wez\\.wezterm$",
                         "^com\\.mitchellh\\.ghostty$",
                         "^info\\.sioyek\\.sioyek$",
-                        "^md\\.obsidian$"
+                        "^md\\.obsidian$",
+                        "^org\\.mozilla\\.firefox"
                      ],
                      "type": "frontmost_application_if"
                   },

@@ -18,7 +18,8 @@
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
                                             "^info\\.sioyek\\.sioyek$",
-                                            "^md\\.obsidian$"
+                                            "^md\\.obsidian$",
+                                            "^org\\.mozilla\\.firefox"
                                         ],
                                         "type": "frontmost_application_unless"
                                     }
@@ -43,7 +44,8 @@
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
                                             "^info\\.sioyek\\.sioyek$",
-                                            "^md\\.obsidian$"
+                                            "^md\\.obsidian$",
+                                            "^org\\.mozilla\\.firefox"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -65,7 +67,8 @@
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
                                             "^info\\.sioyek\\.sioyek$",
-                                            "^md\\.obsidian$"
+                                            "^md\\.obsidian$",
+                                            "^org\\.mozilla\\.firefox"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -90,7 +93,8 @@
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
                                             "^info\\.sioyek\\.sioyek$",
-                                            "^md\\.obsidian$"
+                                            "^md\\.obsidian$",
+                                            "^org\\.mozilla\\.firefox"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -137,7 +141,8 @@
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
                                             "^info\\.sioyek\\.sioyek$",
-                                            "^md\\.obsidian$"
+                                            "^md\\.obsidian$",
+                                            "^org\\.mozilla\\.firefox"
                                         ],
                                         "type": "frontmost_application_if"
                                     },
@@ -164,189 +169,6 @@
                         ]
                     },
                     {
-                        "description": "Progrule: Firefox",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": ["option", "command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": ["option", "command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "j",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": { "key_code": "down_arrow" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "k",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": { "key_code": "up_arrow" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "h",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": { "key_code": "left_arrow" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "l",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": { "key_code": "right_arrow" },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "d",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": {
-                                    "key_code": "down_arrow",
-                                    "modifiers": ["command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "u",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": {
-                                    "key_code": "up_arrow",
-                                    "modifiers": ["command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "w",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": {
-                                    "key_code": "w",
-                                    "modifiers": ["command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "n",
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] }
-                                },
-                                "to": {
-                                    "key_code": "t",
-                                    "modifiers": ["command"]
-                                },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Raycast: Seach files",
                         "manipulators": [
                             {
@@ -360,24 +182,6 @@
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                                 "to": { "shell_command": "open raycast://extensions/raycast/file-search/search-files" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Raycast: Check reminders",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "modifiers": { "mandatory": ["left_shift", "left_control", "left_option", "left_command"] },
-                                    "simultaneous": [
-                                        { "key_code": "q" },
-                                        { "key_code": "x" }
-                                    ],
-                                    "simultaneous_options": { "key_down_order": "strict" }
-                                },
-                                "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "open raycast://extensions/raycast/apple-reminders/my-reminders" },
                                 "type": "basic"
                             }
                         ]
@@ -489,9 +293,62 @@
                                 "type": "basic"
                             }
                         ]
+                    },
+                    {
+                        "description": "Progrule: Firefox",
+                        "manipulators": [
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "org\\.mozilla\\.firefox"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "i",
+                                    "modifiers": { "mandatory": "left_control" }
+                                },
+                                "to": {
+                                    "key_code": "right_arrow",
+                                    "modifiers": ["option", "command"]
+                                },
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": [
+                                            "org\\.mozilla\\.firefox"
+                                        ],
+                                        "type": "frontmost_application_if"
+                                    }
+                                ],
+                                "from": {
+                                    "key_code": "o",
+                                    "modifiers": { "mandatory": "left_control" }
+                                },
+                                "to": {
+                                    "key_code": "left_arrow",
+                                    "modifiers": ["option", "command"]
+                                },
+                                "type": "basic"
+                            }
+                        ]
                     }
                 ]
             },
+            "devices": [
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 50484,
+                        "vendor_id": 1133
+                    },
+                    "ignore": true
+                }
+            ],
             "name": "Default",
             "selected": true,
             "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }

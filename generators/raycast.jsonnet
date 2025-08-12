@@ -20,6 +20,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
         }),
       ],
     },
+
     {
       description: 'Raycast: Open clipboard history',
       manipulators: [
@@ -30,6 +31,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
         }),
       ],
     },
+
     {
       description: 'Raycast: Check reminders',
       manipulators: [
@@ -40,6 +42,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
         }),
       ],
     },
+
     {
       description: 'Raycast: Kill process',
       manipulators: [
@@ -50,6 +53,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
         }),
       ],
     },
+
     {
       description: 'Raycast: Seach files',
       manipulators: [

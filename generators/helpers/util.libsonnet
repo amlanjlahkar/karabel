@@ -12,7 +12,8 @@ local key_hyper(mod_only=false) = {
      ],
 };
 // 2}}}
-// TODO: (maybe)Make to event more generic
+
+// TODO: generic "to" event.
 //
 // Map keys to shell_command based on a fixed determinant
 // e.g. can be used to simplify layer specific mappings, where a layer can be determined by a variable
@@ -42,6 +43,7 @@ local set_var(name, value=true) = {
   },
 };
 // 2}}}
+
 // {{{2 Notification
 local set_nf(id, text='') = {
   assert std.type(id) == 'string' && std.type(text) == 'string',
@@ -62,6 +64,7 @@ local if_app(bundles, is_frontmost=true) = {
   type: type,
 };
 // 2}}}
+
 // {{{2 File Paths
 local if_file(file_paths, is_frontmost=true) = {
   assert std.type(file_paths) == 'array' && std.type(is_frontmost) == 'boolean',
@@ -70,6 +73,7 @@ local if_file(file_paths, is_frontmost=true) = {
   type: type,
 };
 // 2}}}
+
 // {{{2 Variables
 local if_var(name, set=true) = {
   assert std.type(name) == 'string' && std.type(set) == 'boolean',
@@ -77,7 +81,6 @@ local if_var(name, set=true) = {
   name: name,
   type: type,
   value: true,
-
 };
 // 2}}}
 // 1}}}

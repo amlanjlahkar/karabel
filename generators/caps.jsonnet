@@ -7,14 +7,15 @@ local set_var = util.set_var;
 local if_app = util.if_app;
 local if_var = util.if_var;
 
-// bundle_identifiers
+// bundle_identifiers for programs
+// where capslock should act as control key
 local bid = [
   '^com\\.apple\\.Terminal$',
   '^com\\.github\\.wez\\.wezterm$',
   '^com\\.mitchellh\\.ghostty$',
   '^info\\.sioyek\\.sioyek$',
   '^md\\.obsidian$',
-
+  '^org\\.mozilla\\.firefox',
 ];
 
 {
