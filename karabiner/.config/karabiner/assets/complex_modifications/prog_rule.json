@@ -1,0 +1,9 @@
+{
+   "rules": [
+      {
+         "description": "Progrule: Firefox",
+         "manipulators": [ ]
+      }
+   ],
+   "title": "Program specific rules"
+}

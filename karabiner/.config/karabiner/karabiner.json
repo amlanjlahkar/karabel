@@ -17,6 +17,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
+                                            "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox"
@@ -43,6 +44,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
+                                            "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox"
@@ -66,6 +68,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
+                                            "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox"
@@ -92,6 +95,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
+                                            "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox"
@@ -140,6 +144,7 @@
                                             "^com\\.apple\\.Terminal$",
                                             "^com\\.github\\.wez\\.wezterm$",
                                             "^com\\.mitchellh\\.ghostty$",
+                                            "^org\\.alacritty$",
                                             "^info\\.sioyek\\.sioyek$",
                                             "^md\\.obsidian$",
                                             "^org\\.mozilla\\.firefox"
@@ -253,7 +258,7 @@
                                     "simultaneous_options": { "key_down_order": "strict" }
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
-                                "to": { "shell_command": "open /Applications/Ghostty.app" },
+                                "to": { "shell_command": "open /Applications/Alacritty.app" },
                                 "type": "basic"
                             }
                         ]
@@ -290,49 +295,6 @@
                                 },
                                 "parameters": { "basic.simultaneous_threshold_milliseconds": 500 },
                                 "to": { "shell_command": "export MOZ_DISABLE_SAFE_MODE_KEY=1; open /Applications/Firefox.app" },
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Progrule: Firefox",
-                        "manipulators": [
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "i",
-                                    "modifiers": { "mandatory": "left_control" }
-                                },
-                                "to": {
-                                    "key_code": "right_arrow",
-                                    "modifiers": ["option", "command"]
-                                },
-                                "type": "basic"
-                            },
-                            {
-                                "conditions": [
-                                    {
-                                        "bundle_identifiers": [
-                                            "org\\.mozilla\\.firefox"
-                                        ],
-                                        "type": "frontmost_application_if"
-                                    }
-                                ],
-                                "from": {
-                                    "key_code": "o",
-                                    "modifiers": { "mandatory": "left_control" }
-                                },
-                                "to": {
-                                    "key_code": "left_arrow",
-                                    "modifiers": ["option", "command"]
-                                },
                                 "type": "basic"
                             }
                         ]

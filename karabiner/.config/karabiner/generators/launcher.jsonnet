@@ -26,7 +26,7 @@ local param_simthreshold = { 'basic.simultaneous_threshold_milliseconds': 500 };
         mp({
           p: param_simthreshold,
           f: { s: [launch_prefix, 'x'], so: { key_down_order: 'strict' }, m: hyper(true).m },
-          t: { sc: 'open /Applications/Ghostty.app' },
+          t: { sc: 'open /Applications/Alacritty.app' },
         }),
       ],
     },

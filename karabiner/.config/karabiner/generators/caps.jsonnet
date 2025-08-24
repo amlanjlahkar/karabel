@@ -13,6 +13,7 @@ local bid = [
   '^com\\.apple\\.Terminal$',
   '^com\\.github\\.wez\\.wezterm$',
   '^com\\.mitchellh\\.ghostty$',
+  '^org\\.alacritty$',
   '^info\\.sioyek\\.sioyek$',
   '^md\\.obsidian$',
   '^org\\.mozilla\\.firefox',
