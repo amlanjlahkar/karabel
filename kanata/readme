@@ -1,0 +1,4 @@
+Personal configuration for kanata (https://github.com/jtroo/kanata).
+
+** Note
+In mac, kanata relies on karabiner's virtual hid client (https://github.com/pqrs-org/Karabiner-DriverKit-VirtualHIDDevice) for emulating key events. So the driver must be installed and accessible by kanata to function properly. The instructions for setting it up is in the repository's readme.
