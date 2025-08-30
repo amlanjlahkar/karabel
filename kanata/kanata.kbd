@@ -1,4 +1,6 @@
-;; keycodes: https://github.com/jtroo/kanata/blob/749d908e7af22611cf7211353841947d457a0cc6/parser/src/keys/mod.rs#L172C1-L172C50
+;; Builtin keyboard configuration for my 2022 macbook air(m2)
+;; Kanata version: v1.9.0
+;; Keycodes: https://github.com/jtroo/kanata/blob/749d908e7af22611cf7211353841947d457a0cc6/parser/src/keys/mod.rs#L172C1-L172C50
 ;; vim:set sw=4:
 
 (defcfg
@@ -18,14 +20,21 @@
 )
 
 (defvar
-    tap-repress-timeout 100
-    hold-timeout        200
+    tap-repress-timeout 200
+    hold-timeout        350
     one-shot-timeout    100
 )
 
-(deftemplate charmod (char mod)
-    ;; https://github.com/jtroo/kanata/blob/v1.9.0/docs/config.adoc#user-content-tap-hold
-    (tap-hold-press-timeout $tap-repress-timeout $hold-timeout $char $mod $char)
+;; Activate $mod on hold and $char on tap.
+;; The $th-type parameter determines the type of tap-hold variant to use.
+;; The shorthands are:
+;;      thp -> tap-hold-press-timeout
+;;      thr -> tap-hold-release-timeout
+;; https://github.com/jtroo/kanata/blob/v1.9.0/docs/config.adoc#user-content-tap-hold
+;;
+(deftemplate charmod (th-type char mod)
+    (if-equal $th-type thp (tap-hold-press-timeout $tap-repress-timeout $hold-timeout $char $mod $char))
+    (if-equal $th-type thr (tap-hold-release-timeout $tap-repress-timeout $hold-timeout $char $mod $char))
 )
 
 (defvirtualkeys
@@ -41,28 +50,21 @@
     f10     mute
     f11     voldwn
     f12     volu
-    a       (t! charmod a lmet)
-    s       (t! charmod s lalt)
-    d       (t! charmod d lsft)
-    f       (t! charmod f lctl)
-    j       (t! charmod j rctl)
-    k       (t! charmod k rsft)
-    l       (t! charmod l lalt)
-    ;       (t! charmod ; rmet)
-    spc     (t! charmod spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
-    caps    (tap-hold-press-timeout
-                $tap-repress-timeout
-                $hold-timeout
-                ;; https://github.com/jtroo/kanata/blob/v1.9.0/docs/config.adoc#user-content-one-shot
-                (one-shot $one-shot-timeout caps) lctl (one-shot $one-shot-timeout caps))
+    a       (t! charmod thr a lmet)
+    s       (t! charmod thr s lalt)
+    d       (t! charmod thr d lsft)
+    f       (t! charmod thr f lctl)
+    j       (t! charmod thr j rctl)
+    k       (t! charmod thr k rsft)
+    l       (t! charmod thr l lalt)
+    ;       (t! charmod thr ; rmet)
+    spc     (t! charmod thr spc (multi (layer-switch extend) (on-release tap-virtualkey clear)))
+    caps    (t! charmod thp (one-shot $one-shot-timeout caps) lctl)
 )
 
 (deflayermap (extend)
-    y ins
-    u home
     i up
     o end
-    p pgup
     a lmet
     s lalt
     d lsft
@@ -78,7 +80,6 @@
     v pp
     n tab
     m bspc
-    , spc
+    , ret
     . del
-    / ret
 )
